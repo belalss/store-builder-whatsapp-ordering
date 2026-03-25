@@ -36,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 Store Builder for WhatsApp Ordering
 Overview
-
+## Project Description
 Store Builder for WhatsApp Ordering is a lightweight platform that enables small businesses to create and manage their own online store without coding, allowing customers to browse products and place structured orders directly via WhatsApp.
 
 The system provides a simple storefront experience for customers and an admin API layer for managing products, categories, promotions, Deliveries, and orders.
