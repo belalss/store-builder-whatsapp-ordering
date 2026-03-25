@@ -1,0 +1,78 @@
+[
+  {
+    "id": "p1",
+    "slug": "kunafa-nabulsiya",
+    "categorySlug": "kunafa",
+    "name": "كنافة ناعمة",
+    "taxable": true,
+    "description": "طازج يومياً",
+    "images": [
+      "/products/knafeh.jpg",
+      "/products/knafeh.jpg",
+      "/products/knafeh.jpg"
+    ],
+    "featured": true,
+    "options": [
+      {
+        "label": "نصف كيلو",
+        "price": 2.75
+      },
+      {
+        "label": "كيلو",
+        "price": 5.5
+      }
+    ]
+  },
+  {
+    "id": "b1",
+    "slug": "baklava-mix",
+    "categorySlug": "baklava",
+    "name": "بقلاوة مشكلة",
+    "taxable": true,
+    "description": "مزيج فاخر من الأصناف.",
+    "images": [
+      "/products/bklava.jpg",
+      "/products/knafeh.jpg",
+      "/products/bklava.jpg"
+    ],
+    "featured": true,
+    "options": [
+      {
+        "label": "نصف كيلو",
+        "price": 8
+      },
+      {
+        "label": "كيلو",
+        "price": 16
+      }
+    ]
+  },
+  {
+    "id": "j1",
+    "slug": "jato-cake",
+    "categorySlug": "jato",
+    "name": "جاتو",
+    "taxable": true,
+    "description": "قوالب قاتو مشكله طازجة.",
+    "images": [
+      "/products/jato.jpg",
+      "/products/knafeh.jpg",
+      "/products/bklava.jpg"
+    ],
+    "featured": true,
+    "options": [
+      {
+        "label": "قالب صغير",
+        "price": 5
+      },
+      {
+        "label": "قالب وسط",
+        "price": 7
+      },
+      {
+        "label": "قالب كبير",
+        "price": 9
+      }
+    ]
+  }
+]

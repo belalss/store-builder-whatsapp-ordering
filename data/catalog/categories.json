@@ -1,0 +1,46 @@
+[
+  {
+    "id": "kunafa",
+    "slug": "kunafa",
+    "name_ar": "كنافة",
+    "name_en": "Kunafa",
+    "image": "/products/knafeh.jpg",
+    "active": true,
+    "sortOrder": 10,
+    "createdAt": "2026-02-18T00:00:00.000Z",
+    "updatedAt": "2026-02-18T00:00:00.000Z"
+  },
+  {
+    "id": "jato",
+    "slug": "jato",
+    "name_ar": "جاتو",
+    "name_en": "Gateau",
+    "image": "/products/jato.jpg",
+    "active": true,
+    "sortOrder": 20,
+    "createdAt": "2026-02-18T00:00:00.000Z",
+    "updatedAt": "2026-02-18T00:00:00.000Z"
+  },
+  {
+    "id": "baklava",
+    "slug": "baklava",
+    "name_ar": "بقلاوة",
+    "name_en": "Baklava",
+    "image": "/products/bklava.jpg",
+    "active": true,
+    "sortOrder": 30,
+    "createdAt": "2026-02-18T00:00:00.000Z",
+    "updatedAt": "2026-02-18T00:00:00.000Z"
+  },
+  {
+    "id": "a75c1f73-f848-47d2-9348-a3cae908bdd2",
+    "slug": "snacks",
+    "name_ar": "سناكات",
+    "name_en": "Snacks",
+    "image": "/products/bklava.jpg",
+    "active": true,
+    "sortOrder": 40,
+    "createdAt": "2026-02-18T20:10:24.637Z",
+    "updatedAt": "2026-02-18T20:10:24.637Z"
+  }
+]

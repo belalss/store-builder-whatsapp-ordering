@@ -1,0 +1,230 @@
+"use client";
+
+import React from "react";
+import { addItemToCart, getCartCount, getCart, setItemQuantity, removeItem } from "@/lib/cart";
+
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import CartDrawer from "@/components/CartDrawer";
+
+
+const STORE = {
+  name: "البشاواتي",
+  whatsapp: "962799304026",
+};
+
+const products = [
+  {
+    id: "1",
+    name: "كنافة نابلسية",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/knafeh.jpg",
+    options: [
+      { label: "نصف كيلو", price: 2.75 },
+      { label: "كيلو", price: 5.5 },
+    ],
+  },
+  {
+    id: "2",
+    name: "بقلاوة مشكلة",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/Bklava.jpg",
+    options: [
+      { label: "نصف كيلو", price: 8 },
+      { label: "كيلو", price: 16 },
+    ],
+  },
+  {
+    id: "3",
+    name: " جاتو",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/Jato.jpg",
+    options: [
+      { label: "قالب كبير ", price: 9 },
+      { label: "قالب وسط", price: 7 },
+      { label: "قالب صغير ", price: 5 },
+    ],
+  },
+  {
+    id: "4",
+    name: "كنافة نابلسية",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/knafeh.jpg",
+    options: [
+      { label: "نصف كيلو", price: 2.75 },
+      { label: "كيلو", price: 5.5 },
+    ],
+  },
+  {
+    id: "5",
+    name: "بقلاوة مشكلة",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/Bklava.jpg",
+    options: [
+      { label: "نصف كيلو", price: 8 },
+      { label: "كيلو", price: 16 },
+    ],
+  },
+  {
+    id: "6",
+    name: " جاتو",
+    description: "طازجة يوميًا، جبنة نابلسية أصلية.",
+    Image: "/images/Jato.jpg",
+    options: [
+      { label: "قالب كبير ", price: 9 },
+      { label: "قالب وسط", price: 7 },
+      { label: "قالب صغير ", price: 5 },
+    ],
+  },
+];
+
+export default function Home() {
+  //return <div style={{ padding: 20 }}>TEST: page is rendering ✅</div>;
+  // ✅ الحالة (State) — لازم تكون هنا
+  const [cartCount, setCartCount] = React.useState(0);
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+const [cart, setCart] = React.useState([]);
+const [total, setTotal] = React.useState(0);
+const [customer, setCustomer] = React.useState({
+  name: "",
+  phone: "",
+  address: "",
+});
+
+
+//React.useEffect(()=>{setCartCount(99);},[cart])
+  // ✅ عند تحميل الصفحة
+React.useEffect(() => {
+  const c = getCart();
+  setCart(c);
+  setTotal(c.reduce((sum, item) => sum + item.price * item.quantity, 0));
+  setCartCount(getCartCount());
+  //setCartCount(123);
+}, []);
+
+
+
+
+  // ✅ إضافة للسلة
+  const addToCart = (product, option) => {
+  addItemToCart(product, option);
+
+  const c = getCart();
+  setCart(c);
+  setTotal(c.reduce((sum, item) => sum + item.price * item.quantity, 0));
+  setCartCount(getCartCount());
+};
+
+
+  // ✅ عرض محتوى السلة (للاختبار)
+  const viewCart = () => {
+    alert(JSON.stringify(getCart(), null, 2));
+    
+  };
+  const sendToWhatsApp = () => {
+  if (!customer.name || !customer.phone || !customer.address) {
+    alert("Please fill Name, Phone, and Address");
+    return;
+  }
+
+  const url = buildWhatsAppUrl({
+  phone: STORE.whatsapp,
+  cart: cart,
+  storeName: STORE.name,
+  customer: customer,
+});
+
+
+  if (!url) {
+    alert("Cart is empty");
+    return;
+  }
+
+  window.open(url, "_blank");
+};
+
+const recalc = () => {
+  const c = getCart();
+  setCart(c);
+  setTotal(c.reduce((sum, item) => sum + item.price * item.quantity, 0));
+  setCartCount(getCartCount());
+};
+const incItem= (item) => {
+  setItemQuantity(item.productId, item.optionLabel, item.quantity + 1);
+  recalc();
+};
+
+const decItem = (item) => {
+  setItemQuantity(item.productId, item.optionLabel, item.quantity - 1); // B: لن تنزل تحت 1
+  recalc();
+};
+
+const removeCartItem = (item) => {
+  removeItem(item.productId, item.optionLabel);
+  recalc();
+};
+
+    return  (
+      
+    <div className="container">
+      <div className="header">
+        <h1>My First Store</h1>
+        <div>
+          <button className="btn" onClick={() => setDrawerOpen(true)}>
+  🛒 {cartCount}
+</button>
+  {/*<button onClick={viewCart} className="btn" style={{ marginLeft: 10 }}>
+            View cart
+          </button>
+  */}
+          <button onClick={sendToWhatsApp} className="btn" style={{ marginLeft: 10 }}>
+  Send via WhatsApp
+</button>
+
+        </div>
+      </div>
+
+      <div className="grid">
+
+        {products.map((p) => (
+          <div key={p.id} className="card">
+            <img
+            src={p.Image}
+            alt={p.name}
+            className="product-image"
+             />
+            <h2>{p.name}</h2>
+            <p className="desc">{p.description}</p>
+
+            {p.options.map((opt) => (
+              <div key={opt.label} className="optionRow">
+                <span>
+                  {opt.label} - {opt.price} JD
+                </span>
+
+                <button className="btn" onClick={() => addToCart(p, opt)}>
+                  Add to cart
+                </button>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <CartDrawer
+  open={drawerOpen}
+  onClose={() => setDrawerOpen(false)}
+  cart={cart}
+  total={total}
+  onSend={sendToWhatsApp}
+  onInc={incItem}
+  onDec={decItem}
+  onRemove={removeCartItem}
+  customer={customer}
+  onCustomerChange={setCustomer}
+/>
+
+
+
+    </div>
+  );
+
+}

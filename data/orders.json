@@ -1,0 +1,149 @@
+[
+  {
+    "id": "da9189c1-7b33-4992-bc2c-2450d52a25d8",
+    "status": "done",
+    "createdAt": "2026-02-17T18:29:58.790Z",
+    "updatedAt": "2026-02-17T18:52:57.558Z",
+    "orderNumber": 27,
+    "store": {
+      "name": "البشاواتي",
+      "currency": "JOD"
+    },
+    "customer": {
+      "name": "BILAL Salah SALAMEH",
+      "phone": "0799304026",
+      "address": "شفا بدران شارع محمد داوود العدوان خلف مجمع الاتفاق"
+    },
+    "checkout": {
+      "method": "delivery",
+      "area": "Amman - Tabarbour",
+      "deliveryFee": 2.5
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "كنافة ناعمة",
+        "option": "نصف كيلو",
+        "price": 2.75,
+        "qty": 1,
+        "note": "",
+        "lineTotal": 2.75
+      }
+    ],
+    "promo": null,
+    "tax": {
+      "label": {
+        "ar": "ضريبة",
+        "en": "Tax"
+      },
+      "amount": 0.44
+    },
+    "totals": {
+      "subtotal": 2.75,
+      "discount": 0,
+      "delivery": 2.5,
+      "tax": 0.44,
+      "grandTotal": 5.69
+    },
+    "note": "",
+    "lang": "en"
+  },
+  {
+    "id": "daaf0cf7-6323-4ad8-abbe-d6e785d8260d",
+    "status": "confirmed",
+    "createdAt": "2026-02-17T18:34:25.829Z",
+    "updatedAt": "2026-02-17T19:00:36.926Z",
+    "orderNumber": 28,
+    "store": {
+      "name": "البشاواتي",
+      "currency": "JOD"
+    },
+    "customer": {
+      "name": "BILAL Salah SALAMEH",
+      "phone": "0799304026",
+      "address": "شفا بدران شارع محمد داوود العدوان خلف مجمع الاتفاق"
+    },
+    "checkout": {
+      "method": "delivery",
+      "area": "Amman - Tabarbour",
+      "deliveryFee": 2.5
+    },
+    "items": [
+      {
+        "productId": "b1",
+        "name": "بقلاوة مشكلة",
+        "option": "نصف كيلو",
+        "price": 8,
+        "qty": 1,
+        "note": "",
+        "lineTotal": 8
+      }
+    ],
+    "promo": null,
+    "tax": {
+      "label": {
+        "ar": "ضريبة",
+        "en": "Tax"
+      },
+      "amount": 1.28
+    },
+    "totals": {
+      "subtotal": 8,
+      "discount": 0,
+      "delivery": 2.5,
+      "tax": 1.28,
+      "grandTotal": 11.78
+    },
+    "note": "",
+    "lang": "en"
+  },
+  {
+    "id": "f6b54990-7cfe-4f52-a8d2-3ee75609bd83",
+    "status": "new",
+    "createdAt": "2026-02-18T11:40:18.680Z",
+    "updatedAt": "2026-02-18T11:40:18.805Z",
+    "orderNumber": 29,
+    "store": {
+      "name": "البشاواتي",
+      "currency": "JOD"
+    },
+    "customer": {
+      "name": "BILAL Salah SALAMEH",
+      "phone": "0799304026",
+      "address": "شفا بدران شارع محمد داوود العدوان خلف مجمع الاتفاق"
+    },
+    "checkout": {
+      "method": "pickup",
+      "area": "",
+      "deliveryFee": 0
+    },
+    "items": [
+      {
+        "productId": "b1",
+        "name": "بقلاوة مشكلة",
+        "option": "نصف كيلو",
+        "price": 8,
+        "qty": 1,
+        "note": "",
+        "lineTotal": 8
+      }
+    ],
+    "promo": null,
+    "tax": {
+      "label": {
+        "ar": "ضريبة",
+        "en": "Tax"
+      },
+      "amount": 1.28
+    },
+    "totals": {
+      "subtotal": 8,
+      "discount": 0,
+      "delivery": 0,
+      "tax": 1.28,
+      "grandTotal": 9.28
+    },
+    "note": "",
+    "lang": "en"
+  }
+]
